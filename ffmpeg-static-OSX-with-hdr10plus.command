@@ -9,7 +9,8 @@ SytemVersion=$(system_profiler SPSoftwareDataType | grep "System Version:" | cut
 OSXMajor=$(sw_vers -productVersion | cut -d'.' -f1)
 
 # About
-tput bold ; echo "fanservice (github fork from albinoz) | 2024 < 2024-07-05" ; tput sgr0
+tput bold ; echo "alpha-0/ffmpeg-static-OSX-with-hdr10plus | 2024 < 2024-07-05" ; tput sgr0
+tput bold ; echo "(github fork from albinoz/ffmpeg-static-OSX)" ; tput sgr0
 tput bold ; echo "Download & Build Last Static FFmpeg" ; tput sgr0
 
 # Infos
@@ -737,7 +738,7 @@ make -j "$THREADS" && make install
 tput bold ; echo ; echo '♻️  ' Check Static FFmpeg ; tput sgr0 ; sleep 2
 if otool -L /Volumes/RamDisk/sw/bin/ffmpeg | grep /usr/local
 then echo FFmpeg build Not Static, Please Report
-open ~/Library/Logs/adam-FFmpeg-Static.log
+open ~/Library/Logs/ffmpeg-static-OSX-with-hdr10plus.log
 else echo FFmpeg build Static, Have Fun
 cp /Volumes/RamDisk/sw/bin/ffmpeg ~/Desktop/ffmpeg
 fi
@@ -745,4 +746,4 @@ fi
 #_ End Time
 Time="$(echo 'obase=60;'$SECONDS | bc | sed 's/ /:/g' | cut -c 2-)"
 tput bold ; echo ; echo '⏳  ' End in "$Time"s ; tput sgr0
-echo ) 2>&1 | tee "$HOME/Library/Logs/adam-FFmpeg-Static.log"
+echo ) 2>&1 | tee "$HOME/Library/Logs/ffmpeg-static-OSX-with-hdr10plus.log"
