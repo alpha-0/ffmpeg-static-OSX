@@ -22,9 +22,9 @@
 
 ##### =-> Download & Build :
 ```
-cd ~/Desktop && git clone https://github.com/alpha-0/ffmpeg-static-OSX.git && \
-chmod 755 ~/Desktop/ffmpeg-static-OSX/ffmpeg-static-OSX-with-hdr10plus.command  && \
-~/Desktop/ffmpeg-static-OSX/ffmpeg-static-OSX-with-hdr10plus.command
+cd ~/Desktop && git clone https://github.com/alpha-0/ffmpeg-static-OSX-with-hdr10plus.git && \
+chmod 755 ~/Desktop/ffmpeg-static-OSX-with-hdr10plus/ffmpeg-static-OSX-with-hdr10plus.command  && \
+~/Desktop/ffmpeg-static-OSX-with-hdr10plus/ffmpeg-static-OSX-with-hdr10plus.command
 ```
 
 #### Result :
@@ -34,5 +34,5 @@ chmod 755 ~/Desktop/ffmpeg-static-OSX/ffmpeg-static-OSX-with-hdr10plus.command  
 
 ##### x-> On Error Build :
 `Please Report with log to`
-https://github.com/alpha-0/ffmpeg-static-OSX/issues
+https://github.com/alpha-0/ffmpeg-static-OSX-with-hdr10plus/issues
 
