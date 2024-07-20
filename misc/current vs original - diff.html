@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <title>Report: ffmpeg-static-OSX-with-hdr10plus.command&nbsp;&vert;&nbsp;ffmpeg-static-OSX.command</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        font-size: .75em;
+      }
+      table.uc {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #999EA2;
+      }
+      table.uc th {
+        padding: .45em .5em .45em 0;
+        vertical-align: text-top;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: left;
+        color: #2d3740;
+        background-color: #F4F4F4;
+        border-bottom: 1px solid #999EA2;
+      }
+      table.uc th.filename {
+        padding-left: .3em;
+      }
+      table.uc td {
+        padding: .2em 0 .2em .4em;
+        vertical-align: text-top;
+        color: #595F62;
+        font-family: "Consolas", "Lucida Console", Monaco, monospace;
+        font-size: 1em;
+      }
+      table.uc td.data {
+        word-break: break-all;
+      }
+      table.uc td.diff {
+        color: #000000;
+        background-color: #ddebff;
+      }
+      table.uc td.missing_line {
+        background: repeating-linear-gradient(
+        to right,
+        white,
+        white 9px,
+        #CED6D9 1px,
+        #CED6D9 10px
+        );
+      }
+      table.uc td.ln {
+        background: #F4F4F4;
+        padding: 0 .5em;
+      }
+      table.uc td.symbol {
+        text-align: center;
+        background: #F4F4F4;
+        padding: 0 .3em 0 0;
+      }
+      .text_diff {
+        color: #E10000;
+      }
+      table.summary {
+        margin: 0 0 .75em 0;
+        padding: 0;
+      }
+      table.summary td {
+        padding: 0 1em;
+      }
+      table.summary td.summary_value {
+        border-right: 1px solid #B0BABF;
+      }
+      table.summary td.summary_label {
+        font-weight: bold;
+        padding: 0;
+      }
+      table.summary td:last-of-type {
+        border-right: 0;
+      }
+      #spacestabs_toggle {
+        float: right;
+      }
+    </style>
+    <script>
+      toggled = false;
+      function toggle_spaces_tabs(tab_val) {
+        var tab_replacer = "&raquo;";
+        var tab_restorer = "&emsp;"
+        for (i = 1; i < tab_val; i++) {
+          tab_replacer += "&nbsp;";
+          tab_restorer += "&emsp;";
+        }
+        tab_replace = toggled ? tab_restorer : tab_replacer;
+        sp_char = toggled ? "&nbsp;" : "&middot";
+        var re_tab = (toggled) ? new RegExp("»(?:&nbsp;){" + (tab_val - 1) +"}", "g") : new RegExp("(?:\u2003){" + tab_val +"}", "g");
+        var re_spc = (toggled) ? new RegExp("·", "g") : new RegExp("&nbsp;", "g");
+        var elems = document.getElementsByClassName("data"), i;
+        for (i = 0; i < elems.length; i++) {
+          if (elems[i].childNodes.length) {
+            elems[i].innerHTML = elems[i].innerHTML.replace(re_spc, sp_char);
+            elems[i].innerHTML = elems[i].innerHTML.replace(re_tab, tab_replace);
+          }
+        }
+        toggled = toggled ? false : true;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="spacestabs_toggle">
+      <input type="checkbox" id="spacestabs" name="spacestabs" onclick="toggle_spaces_tabs(2);"/>
+      <label for="spacestabs">Show spaces / tabs</label>
+    </div>
+    <table class="summary" cellspacing=0 cellpadding=0>
+      <tr>
+        <td class="summary_label">Left file:</td>
+        <td class="summary_value">/Volumes/MacData/Downloads/ffmpeg-static-OSX-with-hdr10plus-20240714/ffmpeg-static-OSX-with-hdr10plus.command</td>
+      </tr>
+      <tr>
+        <td class="summary_label">Right file:</td>
+        <td class="summary_value">/Volumes/MacData/Downloads/ffmpeg-static-OSX-with-hdr10plus-20240714/ffmpeg-static-OSX.command</td>
+      </tr>
+    </table>
+    <table class="summary" cellspacing=0 cellpadding=0>
+      <tr>
+        <td class="summary_label">Report type:</td>
+        <td class="summary_value">Just Differences</td>
+      </tr>
+    </table>
+    <table class="summary" cellspacing=0 cellpadding=0>
+      <tr>
+        <td class="summary_label">Summary:</td>
+        <td class="summary_value">11 Block(s) diff   </td>
+        <td class="summary_value">26 : 23 Line(s) diff      </tr>
+    </table>
+    <table class="summary" cellspacing=0 cellpadding=0>
+      <tr>
+        <td class="summary_label">Ignore options:</td>
+        <td class="summary_value">Ignore line terminators</td>
+      </tr>
+    </table>
+    <table class="uc" cellspacing=0 cellpadding=0>
+      <tr>
+        <th></th>
+        <th></th>
+        <th class="filename">/Volumes/MacData/Downloads/ffmpeg-static-OSX-with-hdr10plus-20240714/ffmpeg-static-OSX-with-hdr10plus.command</th>
+        <th></th>
+        <th></th>
+        <th class="filename">/Volumes/MacData/Downloads/ffmpeg-static-OSX-with-hdr10plus-20240714/ffmpeg-static-OSX.command</th>
+      </tr>
+      <tr>
+        <td class="ln">12</td>
+        <td class="symbol">*</td>
+        <td class="data diff">tput&nbsp;bold&nbsp;;&nbsp;echo&nbsp;&quot;<span class="text_diff">fanservice</span>&nbsp;<span class="text_diff">(</span><span class="text_diff">github</span>&nbsp;<span class="text_diff">fork</span><span class="text_diff">&nbsp;</span><span class="text_diff">from</span>&nbsp;<span class="text_diff">albinoz</span>)<span class="text_diff">&nbsp;</span>&vert;&nbsp;<span class="text_diff">2024</span>&nbsp;&lt;&nbsp;<span class="text_diff">2024</span>-<span class="text_diff">07</span>-<span class="text_diff">05</span>&quot;&nbsp;;&nbsp;tput&nbsp;sgr0</td>
+        <td class="separ"></td>
+        <td class="ln">12</td>
+        <td class="data diff">tput&nbsp;bold&nbsp;;&nbsp;echo&nbsp;&quot;<span class="text_diff">adam</span>&nbsp;&vert;&nbsp;<span class="text_diff">2014</span>&nbsp;&lt;&nbsp;<span class="text_diff">2023</span>-<span class="text_diff">12</span>-<span class="text_diff">02</span>&quot;&nbsp;;&nbsp;tput&nbsp;sgr0</td>
+      </tr>
+      <tr>
+        <td class="ln">28</td>
+        <td class="symbol">*</td>
+        <td class="data diff">Processor=$(system_profiler&nbsp;SPHardwareDataType&nbsp;&vert;&nbsp;grep&nbsp;<span class="text_diff">-</span><span class="text_diff">e</span><span class="text_diff">&nbsp;</span><span class="text_diff">VMware</span><span class="text_diff">&nbsp;</span><span class="text_diff">-</span><span class="text_diff">e</span><span class="text_diff">&nbsp;</span>Intel&nbsp;&vert;&nbsp;cut&nbsp;-d&nbsp;&apos;:&apos;&nbsp;-f2&nbsp;&vert;&nbsp;&nbsp;cut&nbsp;-d&nbsp;&apos;&nbsp;&apos;&nbsp;-f2-10)</td>
+        <td class="separ"></td>
+        <td class="ln">28</td>
+        <td class="data diff">Processor=$(system_profiler&nbsp;SPHardwareDataType&nbsp;&vert;&nbsp;grep&nbsp;Intel&nbsp;&vert;&nbsp;cut&nbsp;-d&nbsp;&apos;:&apos;&nbsp;-f2&nbsp;&vert;&nbsp;&nbsp;cut&nbsp;-d&nbsp;&apos;&nbsp;&apos;&nbsp;-f2-10)</td>
+      </tr>
+      <tr>
+        <td class="ln">29</td>
+        <td class="symbol">*</td>
+        <td class="data diff">if&nbsp;echo&nbsp;&quot;$Processor&quot;&nbsp;&vert;&nbsp;grep&nbsp;<span class="text_diff">-</span><span class="text_diff">e</span><span class="text_diff">&nbsp;</span><span class="text_diff">VMware</span><span class="text_diff">&nbsp;</span><span class="text_diff">-</span><span class="text_diff">e</span><span class="text_diff">&nbsp;</span>Intel&nbsp;&gt;/dev/null&nbsp;2&gt;&amp;1&nbsp;;&nbsp;then&nbsp;echo&nbsp;&quot;$Processor&quot;&nbsp;Processor&nbsp;Supported&nbsp;;&nbsp;else&nbsp;echo&nbsp;&quot;$Processor&quot;&nbsp;Processor&nbsp;not&nbsp;Supported&nbsp;\</td>
+        <td class="separ"></td>
+        <td class="ln">29</td>
+        <td class="data diff">if&nbsp;echo&nbsp;&quot;$Processor&quot;&nbsp;&vert;&nbsp;grep&nbsp;Intel&nbsp;&gt;/dev/null&nbsp;2&gt;&amp;1&nbsp;;&nbsp;then&nbsp;echo&nbsp;&quot;$Processor&quot;&nbsp;Processor&nbsp;Supported&nbsp;;&nbsp;else&nbsp;echo&nbsp;&quot;$Processor&quot;&nbsp;Processor&nbsp;not&nbsp;Supported&nbsp;\</td>
+      </tr>
+      <tr>
+        <td class="ln">235</td>
+        <td class="symbol">&lt;!</td>
+        <td class="data diff"><span class="text_diff">#&nbsp;Bug&nbsp;fix:&nbsp;linker&nbsp;error&nbsp;on&nbsp;duplicated&nbsp;symbol&nbsp;&quot;dec_init&quot;.&nbsp;Caused&nbsp;by&nbsp;the&nbsp;naming&nbsp;conflict&nbsp;of&nbsp;libbluray&nbsp;and&nbsp;ffmpeg.&nbsp;Solved&nbsp;by&nbsp;changing&nbsp;function&nbsp;name&nbsp;on&nbsp;source&nbsp;code&nbsp;of&nbsp;libbluray.</span></td>
+        <td class="separ"></td>
+        <td class="ln"></td>
+        <td class="data missing_line"></td>
+      </tr>
+      <tr>
+        <td class="ln">236</td>
+        <td class="symbol">&lt;!</td>
+        <td class="data diff"><span class="text_diff">sed&nbsp;-i&nbsp;&apos;&apos;&nbsp;&apos;s/dec_init/bd_dec_init/g&apos;&nbsp;&quot;src/libbluray/disc/dec.h&quot;&nbsp;&quot;src/libbluray/disc/dec.c&quot;&nbsp;&quot;src/libbluray/disc/disc.c&quot;</span></td>
+        <td class="separ"></td>
+        <td class="ln"></td>
+        <td class="data missing_line"></td>
+      </tr>
+      <tr>
+        <td class="ln">296</td>
+        <td class="symbol">*</td>
+        <td class="data diff"><span class="text_diff">mkdir</span><span class="text_diff">&nbsp;</span><span class="text_diff">build</span><span class="text_diff">&nbsp;</span><span class="text_diff">&amp;&amp;</span><span class="text_diff">&nbsp;</span><span class="text_diff">cd</span><span class="text_diff">&nbsp;</span><span class="text_diff">build</span></td>
+        <td class="separ"></td>
+        <td class="ln">294</td>
+        <td class="data diff"><span class="text_diff">.</span><span class="text_diff">/</span><span class="text_diff">autogen</span><span class="text_diff">.</span><span class="text_diff">sh</span></td>
+      </tr>
+      <tr>
+        <td class="ln">297</td>
+        <td class="symbol">*</td>
+        <td class="data diff"><span class="text_diff">cmake</span>&nbsp;<span class="text_diff">-</span><span class="text_diff">G</span><span class="text_diff">&nbsp;</span><span class="text_diff">&quot;</span><span class="text_diff">Ninja</span><span class="text_diff">&quot;</span><span class="text_diff">&nbsp;</span><span class="text_diff">..</span><span class="text_diff">&nbsp;</span><span class="text_diff">-</span><span class="text_diff">DCMAKE_INSTALL_PREFIX</span><span class="text_diff">:</span><span class="text_diff">PATH</span>=${TARGET}</td>
+        <td class="separ"></td>
+        <td class="ln">295</td>
+        <td class="data diff"><span class="text_diff">.</span><span class="text_diff">/</span><span class="text_diff">configure</span>&nbsp;<span class="text_diff">--</span><span class="text_diff">prefix</span>=${TARGET}<span class="text_diff">&nbsp;</span><span class="text_diff">--</span><span class="text_diff">disable</span><span class="text_diff">-</span><span class="text_diff">shared</span><span class="text_diff">&nbsp;</span><span class="text_diff">--</span><span class="text_diff">enable</span><span class="text_diff">-</span><span class="text_diff">static</span></td>
+      </tr>
+      <tr>
+        <td class="ln">298</td>
+        <td class="symbol">*</td>
+        <td class="data diff"><span class="text_diff">ninja</span>&nbsp;&amp;&amp;&nbsp;<span class="text_diff">ninja</span>&nbsp;install</td>
+        <td class="separ"></td>
+        <td class="ln">296</td>
+        <td class="data diff"><span class="text_diff">make</span>&nbsp;<span class="text_diff">-</span><span class="text_diff">j</span>&nbsp;<span class="text_diff">&quot;</span><span class="text_diff">$THREADS</span><span class="text_diff">&quot;</span><span class="text_diff">&nbsp;</span>&amp;&amp;&nbsp;<span class="text_diff">make</span>&nbsp;install</td>
+      </tr>
+      <tr>
+        <td class="ln">437</td>
+        <td class="symbol">*</td>
+        <td class="data diff">./configure&nbsp;--prefix=${TARGET}&nbsp;--disable-dependency-tracking&nbsp;--with-ogg-libraries=${TARGET}/lib&nbsp;--with-ogg-includes=/Volumes/RamDisk/sw/include/&nbsp;--enable-static&nbsp;--disable-shared<span class="text_diff">&nbsp;</span><span class="text_diff">--</span><span class="text_diff">build</span><span class="text_diff">=</span><span class="text_diff">x86_64</span></td>
+        <td class="separ"></td>
+        <td class="ln">435</td>
+        <td class="data diff">./configure&nbsp;--prefix=${TARGET}&nbsp;--disable-dependency-tracking&nbsp;--with-ogg-libraries=${TARGET}/lib&nbsp;--with-ogg-includes=/Volumes/RamDisk/sw/include/&nbsp;--enable-static&nbsp;--disable-shared</td>
+      </tr>
+      <tr>
+        <td class="ln">573</td>
+        <td class="symbol">*</td>
+        <td class="data diff">tput&nbsp;bold&nbsp;;&nbsp;echo&nbsp;;&nbsp;echo&nbsp;&apos;📍&nbsp;&apos;&nbsp;svt-av1&nbsp;git&nbsp;;&nbsp;tput&nbsp;sgr0</td>
+        <td class="separ"></td>
+        <td class="ln">571</td>
+        <td class="data diff"><span class="text_diff">#</span>tput&nbsp;bold&nbsp;;&nbsp;echo&nbsp;;&nbsp;echo&nbsp;&apos;📍&nbsp;&apos;&nbsp;svt-av1&nbsp;git&nbsp;;&nbsp;tput&nbsp;sgr0</td>
+      </tr>
+      <tr>
+        <td class="ln">574</td>
+        <td class="symbol">*</td>
+        <td class="data diff">if&nbsp;find&nbsp;/Volumes/RamDisk/sw/&nbsp;&vert;&nbsp;grep&nbsp;&quot;SvtAv1&quot;&nbsp;&gt;/dev/null&nbsp;2&gt;&amp;1&nbsp;;&nbsp;then&nbsp;echo&nbsp;Build&nbsp;All&nbsp;Ready&nbsp;Done&nbsp;;&nbsp;else</td>
+        <td class="separ"></td>
+        <td class="ln">572</td>
+        <td class="data diff"><span class="text_diff">#</span>if&nbsp;find&nbsp;/Volumes/RamDisk/sw/&nbsp;&vert;&nbsp;grep&nbsp;&quot;SvtAv1&quot;&nbsp;&gt;/dev/null&nbsp;2&gt;&amp;1&nbsp;;&nbsp;then&nbsp;echo&nbsp;Build&nbsp;All&nbsp;Ready&nbsp;Done&nbsp;;&nbsp;else</td>
+      </tr>
+      <tr>
+        <td class="ln">575</td>
+        <td class="symbol">*</td>
+        <td class="data diff">cd&nbsp;${CMPL}&nbsp;;&nbsp;sleep&nbsp;2</td>
+        <td class="separ"></td>
+        <td class="ln">573</td>
+        <td class="data diff"><span class="text_diff">#</span>cd&nbsp;${CMPL}&nbsp;;&nbsp;sleep&nbsp;2</td>
+      </tr>
+      <tr>
+        <td class="ln">576</td>
+        <td class="symbol">*</td>
+        <td class="data diff">git&nbsp;clone&nbsp;--depth=1&nbsp;https://gitlab.com/AOMediaCodec/SVT-AV1.git</td>
+        <td class="separ"></td>
+        <td class="ln">574</td>
+        <td class="data diff"><span class="text_diff">#</span>git&nbsp;clone&nbsp;--depth=1&nbsp;https://gitlab.com/AOMediaCodec/SVT-AV1.git</td>
+      </tr>
+      <tr>
+        <td class="ln">577</td>
+        <td class="symbol">*</td>
+        <td class="data diff">cd&nbsp;SVT-AV1/Build/</td>
+        <td class="separ"></td>
+        <td class="ln">575</td>
+        <td class="data diff"><span class="text_diff">#</span>cd&nbsp;SVT-AV1/Build/</td>
+      </tr>
+      <tr>
+        <td class="ln">578</td>
+        <td class="symbol">*</td>
+        <td class="data diff">cmake&nbsp;..&nbsp;-G&quot;Unix&nbsp;Makefiles&quot;&nbsp;-DCMAKE_BUILD_TYPE=Release&nbsp;-DCMAKE_INSTALL_PREFIX:PATH=${TARGET}<span class="text_diff">&nbsp;</span><span class="text_diff">-</span><span class="text_diff">DBUILD_SHARED_LIBS</span><span class="text_diff">=</span><span class="text_diff">OFF</span></td>
+        <td class="separ"></td>
+        <td class="ln">576</td>
+        <td class="data diff"><span class="text_diff">#</span>cmake&nbsp;..&nbsp;-G&quot;Unix&nbsp;Makefiles&quot;&nbsp;-DCMAKE_BUILD_TYPE=Release&nbsp;-DCMAKE_INSTALL_PREFIX:PATH=${TARGET}</td>
+      </tr>
+      <tr>
+        <td class="ln">579</td>
+        <td class="symbol">*</td>
+        <td class="data diff">make&nbsp;-j&nbsp;&quot;$THREADS&quot;&nbsp;&amp;&amp;&nbsp;make&nbsp;install</td>
+        <td class="separ"></td>
+        <td class="ln">577</td>
+        <td class="data diff"><span class="text_diff">#</span>make&nbsp;-j&nbsp;&quot;$THREADS&quot;&nbsp;&amp;&amp;&nbsp;make&nbsp;install</td>
+      </tr>
+      <tr>
+        <td class="ln">580</td>
+        <td class="symbol">*</td>
+        <td class="data diff">if&nbsp;find&nbsp;/Volumes/RamDisk/sw/&nbsp;&vert;&nbsp;grep&nbsp;&quot;SvtAv1&quot;&nbsp;&gt;/dev/null&nbsp;;&nbsp;then&nbsp;tput&nbsp;bold&nbsp;;&nbsp;echo&nbsp;Build&nbsp;OK&nbsp;;&nbsp;else&nbsp;echo&nbsp;Build&nbsp;Fail&nbsp;;&nbsp;tput&nbsp;sgr0&nbsp;;&nbsp;exit&nbsp;;&nbsp;fi</td>
+        <td class="separ"></td>
+        <td class="ln">578</td>
+        <td class="data diff"><span class="text_diff">#</span>if&nbsp;find&nbsp;/Volumes/RamDisk/sw/&nbsp;&vert;&nbsp;grep&nbsp;&quot;SvtAv1&quot;&nbsp;&gt;/dev/null&nbsp;;&nbsp;then&nbsp;tput&nbsp;bold&nbsp;;&nbsp;echo&nbsp;Build&nbsp;OK&nbsp;;&nbsp;else&nbsp;echo&nbsp;Build&nbsp;Fail&nbsp;;&nbsp;tput&nbsp;sgr0&nbsp;;&nbsp;exit&nbsp;;&nbsp;fi</td>
+      </tr>
+      <tr>
+        <td class="ln">581</td>
+        <td class="symbol">*</td>
+        <td class="data diff">rm&nbsp;-fr&nbsp;/Volumes/RamDisk/compile/*</td>
+        <td class="separ"></td>
+        <td class="ln">579</td>
+        <td class="data diff"><span class="text_diff">#</span>rm&nbsp;-fr&nbsp;/Volumes/RamDisk/compile/*</td>
+      </tr>
+      <tr>
+        <td class="ln">582</td>
+        <td class="symbol">*</td>
+        <td class="data diff">fi</td>
+        <td class="separ"></td>
+        <td class="ln">580</td>
+        <td class="data diff"><span class="text_diff">#</span>fi</td>
+      </tr>
+      <tr>
+        <td class="ln">655</td>
+        <td class="symbol">*</td>
+        <td class="data diff">cmake&nbsp;-G&nbsp;&quot;Ninja&quot;&nbsp;../../../x265*/source&nbsp;-DCMAKE_INSTALL_PREFIX:PATH=${TARGET}&nbsp;-<span class="text_diff">DENABLE_HDR10_PLUS</span>=<span class="text_diff">ON</span>&nbsp;-DHIGH_BIT_DEPTH=ON&nbsp;-DEXPORT_C_API=OFF&nbsp;-DENABLE_SHARED=OFF&nbsp;-DENABLE_CLI=OFF<span class="text_diff">&nbsp;</span><span class="text_diff">-</span>DMAIN12<span class="text_diff">=</span>ON</td>
+        <td class="separ"></td>
+        <td class="ln">653</td>
+        <td class="data diff">cmake&nbsp;-G&nbsp;&quot;Ninja&quot;&nbsp;../../../x265*/source&nbsp;-DCMAKE_INSTALL_PREFIX:PATH=${TARGET}&nbsp;-DHIGH_BIT_DEPTH=ON&nbsp;-DEXPORT_C_API=OFF&nbsp;-DENABLE_SHARED=OFF&nbsp;-DENABLE_CLI=OFF&nbsp;-DMAIN12=ON</td>
+      </tr>
+      <tr>
+        <td class="ln">660</td>
+        <td class="symbol">*</td>
+        <td class="data diff">cmake&nbsp;-G&nbsp;&quot;Ninja&quot;&nbsp;../../../x265*/source&nbsp;-DCMAKE_INSTALL_PREFIX:PATH=${TARGET}&nbsp;-<span class="text_diff">DENABLE_HDR10_PLUS</span>=<span class="text_diff">ON</span>&nbsp;-DHIGH_BIT_DEPTH=ON&nbsp;-DEXPORT_C_API=OFF&nbsp;-DENABLE_SHARED=OFF<span class="text_diff">&nbsp;</span><span class="text_diff">-</span>DENABLE_CLI<span class="text_diff">=</span>OFF</td>
+        <td class="separ"></td>
+        <td class="ln">658</td>
+        <td class="data diff">cmake&nbsp;-G&nbsp;&quot;Ninja&quot;&nbsp;../../../x265*/source&nbsp;-DCMAKE_INSTALL_PREFIX:PATH=${TARGET}&nbsp;-DHIGH_BIT_DEPTH=ON&nbsp;-DEXPORT_C_API=OFF&nbsp;-DENABLE_SHARED=OFF&nbsp;-DENABLE_CLI=OFF</td>
+      </tr>
+      <tr>
+        <td class="ln">714</td>
+        <td class="symbol">*</td>
+        <td class="data diff">export&nbsp;LDFLAGS=&quot;-L${TARGET}/lib&nbsp;-Wl,-framework,OpenAL<span class="text_diff">,</span><span class="text_diff">-</span><span class="text_diff">ld_classic</span>&quot;</td>
+        <td class="separ"></td>
+        <td class="ln">712</td>
+        <td class="data diff">export&nbsp;LDFLAGS=&quot;-L${TARGET}/lib&nbsp;-Wl,-framework,OpenAL&quot;</td>
+      </tr>
+      <tr>
+        <td class="ln">723</td>
+        <td class="symbol">*</td>
+        <td class="data diff">./configure&nbsp;--extra-version=<span class="text_diff">fanservice</span>-&quot;$(date&nbsp;+&quot;%Y-%m-%d&quot;)&quot;&nbsp;--extra-cflags=&quot;-fno-stack-check&quot;&nbsp;--cc=/usr/bin/clang&nbsp;\</td>
+        <td class="separ"></td>
+        <td class="ln">721</td>
+        <td class="data diff">./configure&nbsp;--extra-version=<span class="text_diff">adam</span>-&quot;$(date&nbsp;+&quot;%Y-%m-%d&quot;)&quot;&nbsp;--extra-cflags=&quot;-fno-stack-check&quot;&nbsp;--cc=/usr/bin/clang&nbsp;\</td>
+      </tr>
+      <tr>
+        <td class="ln">724</td>
+        <td class="symbol">*</td>
+        <td class="data diff">&nbsp;--<span class="text_diff">host</span>-<span class="text_diff">ldflags</span><span class="text_diff">=</span><span class="text_diff">&quot;</span><span class="text_diff">-</span><span class="text_diff">Wl</span><span class="text_diff">,</span><span class="text_diff">-</span><span class="text_diff">ld_classic</span><span class="text_diff">&quot;</span><span class="text_diff">&nbsp;</span><span class="text_diff">--</span>enable<span class="text_diff">-</span>pthreads&nbsp;--enable-postproc&nbsp;--enable-runtime-cpudetect&nbsp;\</td>
+        <td class="separ"></td>
+        <td class="ln">722</td>
+        <td class="data diff">&nbsp;--enable-pthreads&nbsp;--enable-postproc&nbsp;--enable-runtime-cpudetect&nbsp;\</td>
+      </tr>
+      <tr>
+        <td class="ln">729</td>
+        <td class="symbol">*</td>
+        <td class="data diff">&nbsp;--enable-libxvid&nbsp;--enable-libopenh264&nbsp;--enable-libx264&nbsp;--enable-libx265&nbsp;--enable-libvpx&nbsp;\</td>
+        <td class="separ"></td>
+        <td class="ln">727</td>
+        <td class="data diff">&nbsp;--enable-libxvid&nbsp;--enable-libopenh264&nbsp;--enable-libx264&nbsp;--enable-libx265&nbsp;--enable-libvpx<span class="text_diff">&nbsp;&nbsp;</span><span class="text_diff">--</span><span class="text_diff">enable</span><span class="text_diff">-</span><span class="text_diff">libaom</span><span class="text_diff">&nbsp;</span><span class="text_diff">--</span><span class="text_diff">enable</span><span class="text_diff">-</span><span class="text_diff">libdav1d</span><span class="text_diff">&nbsp;</span><span class="text_diff">--</span><span class="text_diff">enable</span><span class="text_diff">-</span><span class="text_diff">librav1e</span>&nbsp;\</td>
+      </tr>
+      <tr>
+        <td class="ln">730</td>
+        <td class="symbol">&lt;!</td>
+        <td class="data diff"><span class="text_diff">&nbsp;--enable-libaom&nbsp;--enable-libsvtav1&nbsp;--enable-libdav1d&nbsp;--enable-librav1e&nbsp;\</span></td>
+        <td class="separ"></td>
+        <td class="ln"></td>
+        <td class="data missing_line"></td>
+      </tr>
+    </table>
+  </body>
+</html>
